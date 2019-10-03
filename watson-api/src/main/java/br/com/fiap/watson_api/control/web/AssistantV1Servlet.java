@@ -39,12 +39,12 @@ public class AssistantV1Servlet extends HttpServlet {
 
 		// Configuração de autenticação do serviço
 		IamOptions options = new IamOptions.Builder()
-				.apiKey("<apikey>")
+				.apiKey("LE_4dtw7qu3Mk6SuNKMf6vRKpNxD7nUzUrcPiBDrJQAQ")
 				.build();
 		
 		// Criando o objeto do serviço desejado
 		Assistant service = new Assistant("2018-02-16", options);
-		String workspaceId = "<skill_id>";
+		String workspaceId = "28c60061-f65c-4a45-a94b-6267b15ae078";
 		
 		// Preparando a mensagem de envio
 		MessageInput input = new MessageInput();

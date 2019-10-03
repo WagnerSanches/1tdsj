@@ -41,11 +41,11 @@ public class AssistantServlet extends HttpServlet{
 		
 		// Configuração de autenticação do serviço
 		IamOptions options = new IamOptions.Builder()
-				.apiKey("<apikey>")
+				.apiKey("LE_4dtw7qu3Mk6SuNKMf6vRKpNxD7nUzUrcPiBDrJQAQ")
 				.build();
 		// Criando o objeto do serviço desejado
 		Assistant service = new Assistant("2019-02-28", options);
-		String assistantId = "<apikey>";
+		String assistantId = "3106197f-7ce2-4e7b-b8dc-d2a13ef014be";
 		
 		//  Criando minha sessão
 		CreateSessionOptions sessionOptions = new CreateSessionOptions.Builder()
