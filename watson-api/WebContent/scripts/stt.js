@@ -30,9 +30,11 @@ btnRecord.addEventListener("click", function(event) {
 		audioContext = new AudioContext;
 		gumStream = stream;
 		input = audioContext.createMediaStreamSource(stream);
+		
 		rec = new Recorder(input, {
 			numChannels : 1
 		});
+		
 		rec.record();
 	}).catch(function(err){
 		console.log(err);
@@ -79,7 +81,7 @@ function sendBlobToText(blob) {
 			// Deu bom
 			var resposta = JSON.parse(xhr.responseText);
 			resposta[0].alternatives.forEach(function(transcript) {
-				createMessage(transcript.transcript, "me");
+				callBot(transcript.transcript);
 			});
 		} else {
 			// Deu ruim
